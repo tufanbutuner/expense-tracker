@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DUMMY_EXPENSE_DATA from "./Components/Expenses/DummyData";
 import Expenses from "./Components/Expenses/Expenses";
+
 import NewExpense from "./Components/NewExpense/NewExpense";
 
 function App() {
