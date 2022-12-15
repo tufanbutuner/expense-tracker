@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import "../Expenses/Expenses.css";
 import ExpensesFilter from "./ExpensesFilter";
 import { useState } from "react";
+import ExpensesList from "./ExpensesList";
 
 export default function Expenses(props) {
   const [filteredYear, setFilteredYear] = useState("2022");
@@ -23,9 +23,7 @@ export default function Expenses(props) {
         onFilterChange={filterChangeHandler}
       />
       <Card className="expenses">
-        {filteredExpenses.map((expense) => {
-          return <ExpenseItem key={expense.id} {...expense} />;
-        })}
+        <ExpensesList expenses={filteredExpenses} />
       </Card>
     </>
   );
