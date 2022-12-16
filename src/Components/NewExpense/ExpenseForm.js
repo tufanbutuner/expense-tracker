@@ -26,7 +26,7 @@ export default function ExpenseForm(props) {
 
     const expenseData = {
       title: data.title,
-      amount: data.amount,
+      amount: +data.amount,
       date: new Date(data.date),
     };
 
